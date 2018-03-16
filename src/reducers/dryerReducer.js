@@ -1,20 +1,19 @@
-import {ADD_TODO} from '../constants/dryerConstants';
+import { setAppointments } from '../actions/dryerApointmentsActions';
 
 const initialState = {
-    todos: {}
+    appointments: {
+        headers: [],
+        data: []
+    }
 };
 
 const dryer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_TODO:
+        case setAppointments:
             return Object.assign({}, state, {
-                todos: [
-                    ...state.todos,
-                    {
-                        todo: action.todo,
-                        completed: false
-                    }
-                ]
+                appointments: Object.assign({}, state.appointments, {
+                    headers: action.data
+                })
             });
         default:
             return state;

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import DryerContainer from './DryerContainer';
+import DryerHeaderComponent from './DryerHeaderComponent';
+import DryerMain from './DryerMainComponent';
 
 class FirstPageContainer extends Component {
     render() {
@@ -8,7 +9,8 @@ class FirstPageContainer extends Component {
                 <header className="App-header">
                     <h1 className="App-title">Programare uscatorie</h1>
                 </header>
-                <DryerContainer/>
+                <DryerHeaderComponent/>
+                <DryerMain/>
             </div>
         );
     }
